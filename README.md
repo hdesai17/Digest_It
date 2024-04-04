@@ -1,5 +1,5 @@
 # Submit a protein sequence and pick an enzyme to digest it!
-This repository provides code for _in-silico_ digesting protein sequences and includes hydrophobicity of resulting peptides. Score are generated using summed Kyte-Doolittle values.
+This repository provides code for _in-silico_ digesting protein sequences and includes hydrophobicity of resulting peptides. Scores are generated using summed Kyte-Doolittle values.
 
 Enzyme choices: 
 - None 
