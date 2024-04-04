@@ -2,13 +2,13 @@
 This repository provides code for _in-silico_ digesting protein sequences and includes hydrophobicity of resulting peptides. Score are generated using summed Kyte-Doolittle values.
 
 Enzyme choices: \
-None \
-Tyrpsin \
-Chymotrypsin \
-Lyc-C \
-Arg-C \
-Glu-C \
-AspN
+>None \
+>Tyrpsin \
+>Chymotrypsin \
+>Lyc-C \
+>Arg-C \
+>Glu-C \
+>AspN
 
 Visit the app (hosted on AWS)
 
