@@ -3,7 +3,7 @@ This repository provides code for _in-silico_ digesting protein sequences and in
 
 Enzyme choices: 
 - None 
-- Tyrpsin 
+- Trypsin 
 - Chymotrypsin 
 - Lyc-C 
 - Arg-C 
