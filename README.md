@@ -5,3 +5,7 @@ This repository provides code for in-silico digesting protein sequences and incl
 Visit the app (hosted on AWS)
 
 http://44.204.185.233/digest
+
+
+
+![Model](detailed.png)
