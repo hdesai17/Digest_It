@@ -8,4 +8,6 @@ http://44.204.185.233/digest
 
 
 
-![Model](detailed.png)
+![Model](input.png)
+
+![Model](output.png)
