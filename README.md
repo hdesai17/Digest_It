@@ -11,7 +11,7 @@ Enzyme choices:
 - AspN
 
 Visit the app (hosted on AWS)
-
+http://35.174.172.45/digest
 
 
 
