@@ -292,10 +292,17 @@ async def digest_protein_sequence(method: str = Form(...), sequence: str = Form(
                     border-bottom: 2px solid #ccc;
                     padding-bottom: 10px;
                 }
+                .peptide-container {
+                    margin-bottom: 20px; /* Add margin between peptides */
+                }
                 .peptide {
-                    display: flex;;
+                    display: flex;
                     flex-wrap: wrap;
                     justify-content: flex-start; /* Left-align each row */
+                    padding: 10px; /* Add padding to the peptide box */
+                    background-color: #fff; /* Background color for the peptide box */
+                    border: 1px solid #ddd; /* Border for the peptide box */
+                    border-radius: 5px; /* Rounded corners for the peptide box */
                 }
                 .amino-acid-container {
                     display: flex;
@@ -305,21 +312,18 @@ async def digest_protein_sequence(method: str = Form(...), sequence: str = Form(
                     margin: 2px;
                 }
                 .amino-acid {
-                    padding: 8px;
-                    border: 1px solid #ddd;
-                    border-radius: 5px;
-                    margin: 2px;
+                    padding: 4px;
                     font-family: monospace;
-                    font-size: 16px;
-                    font-weight: bold; /* Make letters bold */
+                    font-size: 20px;
+                    font-weight: bold;
                 }
                 .residue-number {
-                    font-size: 12px;
+                    font-size: 14px;
                     color: #666;
-                    font-weight: bold; /* Make numbers bold */
+                    font-weight: bold;
                 }
                 .basic {
-                    color: blue !important; /* Apply color with !important to override other styles */
+                    color: blue !important;
                 }
                 .acidic {
                     color: green !important;
@@ -334,7 +338,7 @@ async def digest_protein_sequence(method: str = Form(...), sequence: str = Form(
                     color: red !important;
                 }
                 .key {
-                    margin-bottom: 20px; /* Move key to top by adjusting margin-bottom */
+                    margin-bottom: 20px;
                 }
                 .key li span {
                     font-weight: bold;
@@ -379,13 +383,13 @@ async def digest_protein_sequence(method: str = Form(...), sequence: str = Form(
         peptide_counter = 1  # Counter for labeling peptides
         for peptide in peptides:
             hydropathy_score = round(calculate_hydropathy(peptide), 3)
-            result_html += f"<h3>Peptide #{peptide_counter} - Hydropathy: {hydropathy_score}</h3><div class='peptide'>"
+            result_html += f"<div class='peptide-container'><h3>Peptide #{peptide_counter} - Hydropathy: {hydropathy_score}</h3><div class='peptide'>"
             for aa in peptide:
                 color_class = color_scheme.get(aa.upper(), 'basic')  # Get color class based on amino acid
                 colored_aa = colorize_amino_acids(aa)  # Apply color to amino acid
                 result_html += f'<div class="amino-acid-container"><div class="amino-acid {color_class}">{colored_aa}</div><div class="residue-number">{residue_number}</div></div>'
                 residue_number += 1
-            result_html += "</div>"
+            result_html += "</div></div>"
             peptide_counter += 1
 
         result_html += """
@@ -396,6 +400,8 @@ async def digest_protein_sequence(method: str = Form(...), sequence: str = Form(
         return HTMLResponse(content=result_html)
     else:
         return HTMLResponse(content="<h2 style='color:red;'>Invalid digestion method</h2>")
+
+
 
 
 
