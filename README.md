@@ -12,7 +12,7 @@ Enzyme choices:
 
 Visit the app (hosted on AWS)
 
-http://44.204.185.233/digest
+
 
 
 
