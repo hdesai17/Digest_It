@@ -18,4 +18,4 @@ http://35.174.172.45/digest
 
 ![Model](input.png)
 
-![Model](output.png)
+![Model](output2.png)
